@@ -88,10 +88,13 @@
       }
 
       .brand {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--section-title-color);
-        text-shadow: 0 0 8px var(--glow-medium);
+        display: flex;
+        align-items: center;
+      }
+
+      .brand img {
+        height: 48px;
+        width: auto;
       }
 
       .nav-links {
@@ -221,7 +224,11 @@
   </head>
   <body>
     <header>
-      <div class="brand">Spike A Server</div>
+      <div class="brand">
+        <a href="/index.html">
+          <img src="images/server-icon-large.png" alt="Spike A Server" />
+        </a>
+      </div>
       <nav class="nav-links">
         <a href="#announcement">Announcement</a>
         <a href="#server">Server IP</a>
@@ -233,7 +240,16 @@
       <p>Start Date: Today • End Date: One week from now</p>
       <a href="/fpv-contests/fpv-build-contest-1.html">Learn More</a>
       <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/SKOwWRON1IE?si=b9K9SCyRORuLf5MQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/SKOwWRON1IE?si=b9K9SCyRORuLf5MQ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
     </section>
 
@@ -242,13 +258,17 @@
         <h2 class="section-title">Join Our Minecraft Survival Server</h2>
         <div class="card">
           <h3>🌌 survival.spike-a-server.com</h3>
-          <p>Explore, build, and survive on our galaxy-themed server. Friendly community, epic builds, and new challenges await!</p>
+          <p>
+            Explore, build, and survive on our galaxy-themed server. Friendly
+            community, epic builds, and new challenges await!
+          </p>
         </div>
       </div>
     </section>
 
     <footer>
-      &copy; 2025 spike-a-server.com — A <a href="https://z532.ai" target="_blank">Z532 Site</a>
+      &copy; 2025 spike-a-server.com — A
+      <a href="https://z532.ai" target="_blank">Z532 Site</a>
     </footer>
 
     <script>
