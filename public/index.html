@@ -19,13 +19,13 @@
         --text-muted: #a080d0;
         --section-title-color: #ff55d9;
 
-        --card-bg: #150f20;
-        --card-hover: #2a183f;
+        --card-bg: rgba(10, 10, 10, 0.5);
+        --card-hover: rgba(20, 20, 30, 0.6);
 
         --glow-soft: rgba(255, 160, 255, 0.07);
         --glow-medium: rgba(255, 160, 255, 0.12);
 
-        --max-width: 1200px;
+        --max-width: 50%; /* Max width now 50% */
       }
 
       * {
@@ -40,8 +40,13 @@
 
       body {
         font-family: "Poppins", sans-serif;
-        background: var(--cave-black);
         color: var(--text-primary);
+        background: var(--cave-black);
+        background-image: url("images/bg.png");
+        background-repeat: repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center top;
       }
 
       a {
@@ -112,26 +117,16 @@
         color: var(--text-primary);
       }
 
-      .hero {
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: center;
+      .hero,
+      section {
+        max-width: var(--max-width);
+        margin: 0 auto;
         padding: 140px 24px 80px;
         text-align: center;
-        background-color: var(--obsidian);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at center, rgba(255, 85, 217, 0.05), transparent),
-                    url("images/backgrounds/spike-galaxy.jpg") center/cover no-repeat;
-        opacity: 0.1;
-        z-index: -1;
+        background: rgba(10, 10, 10, 0.4);
+        backdrop-filter: blur(8px);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px var(--glow-soft);
       }
 
       .hero h1 {
@@ -146,7 +141,6 @@
       .hero p {
         font-size: 1.2rem;
         color: var(--text-muted);
-        max-width: 600px;
         margin: 0 auto 20px;
       }
 
@@ -166,7 +160,7 @@
       }
 
       .video-wrapper {
-        max-width: 720px;
+        max-width: 100%;
         margin: 40px auto;
         aspect-ratio: 16/9;
         box-shadow: 0 0 16px var(--glow-soft);
@@ -179,18 +173,7 @@
         border-radius: 8px;
       }
 
-      section {
-        padding: 100px 20px;
-        background: var(--obsidian);
-      }
-
-      .container {
-        max-width: var(--max-width);
-        margin: 0 auto;
-      }
-
       .section-title {
-        text-align: center;
         font-size: 2.3rem;
         color: var(--section-title-color);
         margin-bottom: 40px;
@@ -214,9 +197,13 @@
       }
 
       footer {
-        background: var(--obsidian-deep);
+        max-width: var(--max-width);
+        margin: 0 auto 40px;
+        background: rgba(10, 10, 10, 0.4);
+        backdrop-filter: blur(6px);
         text-align: center;
-        padding: 40px 20px;
+        padding: 20px;
+        border-radius: 8px;
         font-size: 0.9rem;
         color: var(--text-muted);
       }
@@ -254,15 +241,13 @@
     </section>
 
     <section id="server">
-      <div class="container">
-        <h2 class="section-title">Join Our Minecraft Survival Server</h2>
-        <div class="card">
-          <h3>🌌 survival.spike-a-server.com</h3>
-          <p>
-            Explore, build, and survive on our galaxy-themed server. Friendly
-            community, epic builds, and new challenges await!
-          </p>
-        </div>
+      <h2 class="section-title">Join Our Minecraft Survival Server</h2>
+      <div class="card">
+        <h3>🌌 survival.spike-a-server.com</h3>
+        <p>
+          Explore, build, and survive on our galaxy-themed server. Friendly
+          community, epic builds, and new challenges await!
+        </p>
       </div>
     </section>
 
